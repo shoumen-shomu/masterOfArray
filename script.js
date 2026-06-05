@@ -51,7 +51,32 @@ console.log(salad[5]); //🥕
 console.log(salad[9]); //undefinefd
 
 
+//const salad = ["🍅", "🍄", "🥦", "🥒", "🌽", "🥕", "🥑"];
+for (let i=0 ;i <=salad.length-1 ; i++){
+console.log(`Element at index ${i} is ${salad[i]}`);
 
+}
+
+// Element at index 0 is 🍅
+// Element at index 1 is 🍄
+// Element at index 2 is 🥦
+// Element at index 3 is 🥒
+// Element at index 4 is 🌽
+// Element at index 5 is 🥕
+// Element at index 6 is 🥑
+
+
+//push
+const push = salad.push("🥜")  // add a elemnet of end of array
+console.log(push); //8
+console.log(salad); //(8) ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑', '🥜']
+
+//unshift
+const unshift = salad.unshift('🥜')  // add a elemnet of begainning of array
+console.log(unshift); 
+console.log(salad);
+
+//pop
 
 
 
