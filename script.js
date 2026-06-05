@@ -48,6 +48,9 @@ console.log(two);  //[1,2]  array create hobe
 console.log(salad[1]); //🍄
 console.log(salad[2]); //🥦
 console.log(salad[5]); //🥕
+console.log(salad[9]); //undefinefd
+
+
 
 
 
