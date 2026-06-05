@@ -73,10 +73,21 @@ console.log(salad); //(8) ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑
 
 //unshift
 const unshift = salad.unshift('🥜')  // add a elemnet of begainning of array
-console.log(unshift); 
-console.log(salad);
+console.log(unshift); //9
+console.log(salad); //(9) ['🥜', '🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑', '🥜']
+
 
 //pop
+const pop = salad.pop ()  // remove an elememt of end of an array
+console.log(pop);  //🥜
+console.log(salad); // (8) ['🥜', '🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑']
+ 
+//shift
+
+const shift = salad.shift()
+console.log(shift); //7
+console.log(salad); //(7) ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑']
+
 
 
 
