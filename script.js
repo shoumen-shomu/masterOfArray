@@ -90,6 +90,16 @@ console.log(salad); //(7) ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '�
 
 
 
+//-   [x] Array Destructuring in JavaScript
+
+
+const fruits = [apple,mango,bannana]=['🍄', '🥦', '🥒']
+console.log(fruits);
+
+
+
+
+
 
 
 
