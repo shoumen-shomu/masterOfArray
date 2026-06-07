@@ -101,9 +101,29 @@ console.log(salad); //(7) ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '�
   // const mashroom = vegetables[0]
   // const carrot = vegetables[0]
 
-  const [tomato,,carrot] = ['🍅', '🍄', '🥕']
-  console.log(tomato);
-  console.log(carrot);
+  // const [tomato,,carrot] = ['🍅', '🍄', '🥕']
+  // console.log(tomato);
+  // console.log(carrot);
+
+
+
+  //Nested Array destructuring
+
+  //[1,2,[4,[5,6,["a"]]]]
+
+// const fruits = ['🍈', '🍍', '🍌', '🍉', ['🍅', '🍄', '🥕']];
+// const veg = fruits[4] //['🍅', '🍄', '🥕']
+// let carrot = veg[2] //🥕
+
+// fruits[4] [2] //🥕
+
+let [,,,,[,,carrot]] = ['🍈', '🍍', '🍌', '🍉', ['🍅', '🍄', '🥕']];
+
+
+
+
+
+
   
 
 
