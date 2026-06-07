@@ -93,14 +93,18 @@ console.log(salad); //(7) ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '�
 //-   [x] Array Destructuring in JavaScript
 
 
-  const [tomato, mushroom, carrot] = ['🍅', '🍄', '🥕'];
-  console.log(tomato, mushroom, carrot); // Output, 🍅 🍄 🥕
+  // const [tomato, mushroom, carrot] = ['🍅', '🍄', '🥕'];
+  // console.log(tomato, mushroom, carrot); // Output, 🍅 🍄 🥕
 
-  const vegetables = ['🍅', '🍄', '🥕']
-  const tomato = vegetables[0]
-  const mashroom = vegetables[0]
-  const carrot = vegetables[0]
+  // const vegetables = ['🍅', '🍄', '🥕']
+  // const tomato = vegetables[0]
+  // const mashroom = vegetables[0]
+  // const carrot = vegetables[0]
 
+  const [tomato,,carrot] = ['🍅', '🍄', '🥕']
+  console.log(tomato);
+  console.log(carrot);
+  
 
 
 
