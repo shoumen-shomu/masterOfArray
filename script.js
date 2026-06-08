@@ -14,14 +14,11 @@ const mixedArray = [100, "javaScript", {}];
 
 // -   [x] How to Create an Array in JavaScript?
 
+const salad = ["🍅", "🍄", "🥦", "🥒", "🌽", "🥕", "🥑"];
+const newsalad = new Array("🍅", "🍄", "🥦", "🥒", "🌽", "🥕", "🥑");
 
-  const salad = ["🍅", "🍄", "🥦", "🥒", "🌽", "🥕", "🥑"];
-  const newsalad = new Array ("🍅", "🍄", "🥦", "🥒", "🌽", "🥕", "🥑")
-
-  console.log("Salad" ,salad);
-  console.log("New Salad" ,newsalad);
-
-
+console.log("Salad", salad);
+console.log("New Salad", newsalad);
 
 // Constructer Function
 // function Car(model){
@@ -30,14 +27,13 @@ const mixedArray = [100, "javaScript", {}];
 // const bmwCar = new Car ("BMW CAR")
 // console.log(bmwCar);
 
-console.log("salad" ==="newsalad"); //false because of different memory loaction and reference 
+console.log("salad" === "newsalad"); //false because of different memory loaction and reference
 
 // const two = new Array (2)
 // console.log(two);  //[empty × 2] atate array create hobe na
 
-const two = new Array (1,2)
-console.log(two);  //[1,2]  array create hobe 
-
+const two = new Array(1, 2);
+console.log(two); //[1,2]  array create hobe
 
 //===================================
 
@@ -50,11 +46,9 @@ console.log(salad[2]); //🥦
 console.log(salad[5]); //🥕
 console.log(salad[9]); //undefinefd
 
-
 //const salad = ["🍅", "🍄", "🥦", "🥒", "🌽", "🥕", "🥑"];
-for (let i=0 ;i <=salad.length-1 ; i++){
-console.log(`Element at index ${i} is ${salad[i]}`);
-
+for (let i = 0; i <= salad.length - 1; i++) {
+  console.log(`Element at index ${i} is ${salad[i]}`);
 }
 
 // Element at index 0 is 🍅
@@ -65,51 +59,48 @@ console.log(`Element at index ${i} is ${salad[i]}`);
 // Element at index 5 is 🥕
 // Element at index 6 is 🥑
 
-
 //push
-const push = salad.push("🥜")  // add a elemnet of end of array
+const push = salad.push("🥜"); // add a elemnet of end of array
 console.log(push); //8
 console.log(salad); //(8) ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑', '🥜']
 
 //unshift
-const unshift = salad.unshift('🥜')  // add a elemnet of begainning of array
+const unshift = salad.unshift("🥜"); // add a elemnet of begainning of array
 console.log(unshift); //9
 console.log(salad); //(9) ['🥜', '🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑', '🥜']
 
-
 //pop
-const pop = salad.pop ()  // remove an elememt of end of an array
-console.log(pop);  //🥜
+const pop = salad.pop(); // remove an elememt of end of an array
+console.log(pop); //🥜
 console.log(salad); // (8) ['🥜', '🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑']
- 
+
 //shift
 
-const shift = salad.shift()
+const shift = salad.shift();
 console.log(shift); //7
 console.log(salad); //(7) ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑']
 
-
-
 //-   [x] Array Destructuring in JavaScript
 
+// const [tomato, mushroom, carrot] = ['🍅', '🍄', '🥕'];
+// console.log(tomato, mushroom, carrot); // Output, 🍅 🍄 🥕
 
-  // const [tomato, mushroom, carrot] = ['🍅', '🍄', '🥕'];
-  // console.log(tomato, mushroom, carrot); // Output, 🍅 🍄 🥕
+// How to Assign a Default Value to a Variable
 
-  // const vegetables = ['🍅', '🍄', '🥕']
-  // const tomato = vegetables[0]
-  // const mashroom = vegetables[0]
-  // const carrot = vegetables[0]
+// const vegetables = ['🍅', '🍄', '🥕']
+// const tomato = vegetables[0]
+// const mashroom = vegetables[0]
+// const carrot = vegetables[0]
 
-  // const [tomato,,carrot] = ['🍅', '🍄', '🥕']
-  // console.log(tomato);
-  // console.log(carrot);
+// How to Skip a Value in an Array
 
+// const [tomato,,carrot] = ['🍅', '🍄', '🥕']
+// console.log(tomato);
+// console.log(carrot);
 
+//Nested Array destructuring
 
-  //Nested Array destructuring
-
-  //[1,2,[4,[5,6,["a"]]]]
+//[1,2,[4,[5,6,["a"]]]]
 
 // const fruits = ['🍈', '🍍', '🍌', '🍉', ['🍅', '🍄', '🥕']];
 // const veg = fruits[4] //['🍅', '🍄', '🥕']
@@ -117,23 +108,48 @@ console.log(salad); //(7) ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '�
 
 // fruits[4] [2] //🥕
 
-let [,,,,[,,carrot]] = ['🍈', '🍍', '🍌', '🍉', ['🍅', '🍄', '🥕']];
+let [, , , , [, , carrot]] = ["🍈", "🍍", "🍌", "🍉", ["🍅", "🍄", "🥕"]];
 
+// How to Use the Rest Parameter and Spread in JS
+{
+  const [tomato, mushroom, ...rest] = [
+    "🍅",
+    "🍄",
+    "🥦",
+    "🥒",
+    "🌽",
+    "🥕",
+    "🥑",
+  ]; //Array-এর ক্ষেত্রে Rest Parameter বলতে সাধারণত Array Destructuring-এর সাথে Rest Operator বোঝানো হয়।
 
+  console.log(rest); // ['🥦', '🥒', '🌽', '🥕', '🥑']
+  console.log(tomato);
 
+  const mySalad = ["🍅", "🍄", "🥦", "🥒", "🌽", "🥕", "🥑"];
 
-
-
+  const mySaladCopy = [...mySalad]  
+  console.log(mySaladCopy); //['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑']
   
 
+  console.log( mySalad ===  mySaladCopy); //copy or clone from mySalad bt they are not = beacuse of reference memory
+  
+ //-   [x] How to Swap Values with Destructuring?
+
+ let first =  '😔';
+ let second =   '🙂';
+
+ [first,second]=[second, first] 
+ console.log(first);
+ console.log(second);
+  
+ 
+//-   [x] How to Merge Arrays?
+
+const emotions = ['😔','🙂']
+const vagies = ['🥦', '🥒', '🌽', '🥕', '🥑']
+
+const merge = [...emotions,...vagies]
+console.log(merge);
 
 
-
-
-
-
-
-
-
-
-
+}
