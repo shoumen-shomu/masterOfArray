@@ -202,9 +202,42 @@ console.log(color.includes("Black")); //true  karon color array er moddhe ache b
 
 //indexof
 
+// indexOf() method কোনো value array-এর কোন index-এ আছে তা খুঁজে বের করে।
 console.log(color.indexOf("Red")); //0
 console.log(color.indexOf("Black")); //2
 console.log(color.indexOf("red")); //-1 array er moddhe element na thakle -1 show korbe
+console.log(color.lastIndexOf("Black")); // 3 back theke index hisab korbe
+
+
+//reverse
+
+//reverse() method একটি array-এর element গুলোকে উল্টো (reverse) করে দেয়।
+
+console.log(color.reverse()); // ['Black', 'Black', 'Pink', 'Red']
+
+
+//sort
+
+//sort() method array-এর element গুলোকে সাজানোর (sorting) জন্য ব্যবহার করা হয়।
+//the default sort() method converts the elements types into string.
+// the default sorting order is ascending. 
+
+const names  = ["tom","alex","bob"]
+console.log(names.sort());
+
+ let artists = [
+    'John White Abbott', 
+    'Leonardo da Vinci', 
+    'Charles Aubry', 
+    'Anna Atkins', 
+    'Barent Avercamp'
+  ];
+
+   let sorted = artists.sort();
+     console.log('Sort the artist names', sorted);
+
+     console.log(artists === sorted); //returns true
+     
 
 
 
