@@ -192,3 +192,19 @@ console.log(joined);
 const color = ["Red", "Pink", "Green", "Purple"];
 color.fill("Black", 2,4);  //2, 4 na dile sob element Black hoye jeto   
 console.log(color);
+
+
+//includes
+//JavaScript-এর includes() method ব্যবহার করা হয় কোনো array-এর মধ্যে নির্দিষ্ট value আছে কিনা তা চেক করার জন্য।
+
+console.log(color.includes("Blue")); //false  karon color array er moddhe nai
+console.log(color.includes("Black")); //true  karon color array er moddhe ache bt jodi black likhle false asto...letter vari kore
+
+//indexof
+
+console.log(color.indexOf("Red")); //0
+console.log(color.indexOf("Black")); //2
+console.log(color.indexOf("red")); //-1 array er moddhe element na thakle -1 show korbe
+
+
+
