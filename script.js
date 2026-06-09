@@ -127,29 +127,68 @@ let [, , , , [, , carrot]] = ["🍈", "🍍", "🍌", "🍉", ["🍅", "🍄", "
 
   const mySalad = ["🍅", "🍄", "🥦", "🥒", "🌽", "🥕", "🥑"];
 
-  const mySaladCopy = [...mySalad]  
+  const mySaladCopy = [...mySalad];
   console.log(mySaladCopy); //['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑']
-  
 
-  console.log( mySalad ===  mySaladCopy); //copy or clone from mySalad bt they are not = beacuse of reference memory
-  
- //-   [x] How to Swap Values with Destructuring?
+  console.log(mySalad === mySaladCopy); //copy or clone from mySalad bt they are not = beacuse of reference memory
 
- let first =  '😔';
- let second =   '🙂';
+  //-   [x] How to Swap Values with Destructuring?
 
- [first,second]=[second, first] 
- console.log(first);
- console.log(second);
-  
- 
-//-   [x] How to Merge Arrays?
+  let first = "😔";
+  let second = "🙂";
 
-const emotions = ['😔','🙂']
-const vagies = ['🥦', '🥒', '🌽', '🥕', '🥑']
+  [first, second] = [second, first];
+  console.log(first);
+  console.log(second);
 
-const merge = [...emotions,...vagies]
-console.log(merge);
+  //-   [x] How to Merge Arrays?
 
+  const emotions = ["😔", "🙂"];
+  const vagies = ["🥦", "🥒", "🌽", "🥕", "🥑"];
 
+  const merge = [...emotions, ...vagies];
+  console.log(merge);
 }
+
+//-   [X] The length property
+
+const arr1 = [1, 2, 3];
+const arr2 = new Array(4);
+
+console.log(arr1.length);
+console.log(arr2.length);
+
+//The Array Can hold the element that 2 ** 32 -1
+
+arr1.length = 2;
+console.log(arr1); // (2) [1, 2] last element 3 of arr1 is removed automatically
+
+arr1.length = 9;
+console.log(arr1); //(9) [1, 2, empty × 7]
+
+//-   [X] JavaScript Array Methods
+
+//Concat()
+
+//concat() হলো JavaScript-এর একটি method, যা array (এবং string-এর ক্ষেত্রেও) একসাথে জোড়া লাগাতে ব্যবহার হয়। এটি মূল array পরিবর্তন করে না; বরং একটি নতুন array রিটার্ন করে।
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+const third = [7, 8, 9];
+
+const concat = first.concat(second, third);
+console.log(concat); //(9) [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+//join()
+
+//join() method array-এর সব element কে একসাথে string হিসেবে join (জোড়া) করে।
+
+const joined = first.join("-");
+console.log(joined);
+[].join(); //return ""
+
+//fill
+//JavaScript-এ fill() method দিয়ে Array-এর সব বা নির্দিষ্ট অংশে একই value বসানো যায়।
+
+const color = ["Red", "Pink", "Green", "Purple"];
+color.fill("Black", 2,4);  //2, 4 na dile sob element Black hoye jeto   
+console.log(color);

@@ -18,7 +18,7 @@
     -   [x] How to Swap Values with Destructuring?
     -   [x] How to Merge Arrays?
 -   [X] The length property
--   [ ] JavaScript Array Methods
+-   [X] JavaScript Array Methods
     -   [X] How to Create, Remove, Update, and Access Arrays in JavaScript?
         -   [X] The concat() array method
         -   [X] The join() array method
