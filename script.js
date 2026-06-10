@@ -190,9 +190,8 @@ console.log(joined);
 //JavaScript-এ fill() method দিয়ে Array-এর সব বা নির্দিষ্ট অংশে একই value বসানো যায়।
 
 const color = ["Red", "Pink", "Green", "Purple"];
-color.fill("Black", 2,4);  //2, 4 na dile sob element Black hoye jeto   
+color.fill("Black", 2, 4); //2, 4 na dile sob element Black hoye jeto
 console.log(color);
-
 
 //includes
 //JavaScript-এর includes() method ব্যবহার করা হয় কোনো array-এর মধ্যে নির্দিষ্ট value আছে কিনা তা চেক করার জন্য।
@@ -208,36 +207,78 @@ console.log(color.indexOf("Black")); //2
 console.log(color.indexOf("red")); //-1 array er moddhe element na thakle -1 show korbe
 console.log(color.lastIndexOf("Black")); // 3 back theke index hisab korbe
 
-
 //reverse
 
 //reverse() method একটি array-এর element গুলোকে উল্টো (reverse) করে দেয়।
 
 console.log(color.reverse()); // ['Black', 'Black', 'Pink', 'Red']
 
-
 //sort
 
 //sort() method array-এর element গুলোকে সাজানোর (sorting) জন্য ব্যবহার করা হয়।
 //the default sort() method converts the elements types into string.
-// the default sorting order is ascending. 
+// the default sorting order is ascending.
 
-const names  = ["tom","alex","bob"]
+const names = ["tom", "alex", "bob"];
 console.log(names.sort());
 
- let artists = [
-    'John White Abbott', 
-    'Leonardo da Vinci', 
-    'Charles Aubry', 
-    'Anna Atkins', 
-    'Barent Avercamp'
-  ];
+let artists = [
+  "John White Abbott",
+  "Leonardo da Vinci",
+  "Charles Aubry",
+  "Anna Atkins",
+  "Barent Avercamp",
+];
 
-   let sorted = artists.sort();
-     console.log('Sort the artist names', sorted);
+let sorted = artists.sort();
+console.log("Sort the artist names", sorted);
 
-     console.log(artists === sorted); //returns true
-     
+console.log(artists === sorted); //returns true
+
+artists.sort(function (a, b) {
+  return a === b ? 0 : a > b ? -1 : 1;
+});
+
+console.log("Sort the artist name (Desending)", artists);
+
+const ages = [2, 1000, 2, 23, 12, 30, 21];
+console.log(ages.sort());
+ages.sort().sort(function (a, b) {
+  return a === b ? 0 : a > b ? -1 : 1;
+});
 
 
+//splice
 
+//splice(index, deleteCount, item, item1, item2)
+
+const name = ["john", "alex" ,"bob"]
+// console.log(name.splice(0,1, "shoumen"));
+// console.log(name);
+
+// name.splice (1,0 ,"Shomu") 
+// console.log(name); //(4) ['john', 'Shomu', 'alex', 'bob']
+
+name.splice (2,1 ,"Shomu") 
+console.log(name); //(3) ['john', 'alex', 'Shomu']
+
+//at
+
+const fruits = ["Apple", "Banana", "Mango"];
+
+console.log(fruits.at(0));   // Apple
+console.log(fruits.at(1));   // Banana
+console.log(fruits.at(-1));  // Mango
+console.log(fruits.at(-2));  // Banana
+
+
+//flat
+
+ const array1 = [0, 1, 2, [3, 4]];
+
+  console.log(array1.flat());
+  
+  const array2 = [0, 1, [2, [3, [4, 5]]]];
+  console.log(array2.flat());
+  console.log(array2.flat(2));
+  console.log(array2.flat(Infinity));
