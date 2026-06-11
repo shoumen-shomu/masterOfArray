@@ -247,38 +247,50 @@ ages.sort().sort(function (a, b) {
   return a === b ? 0 : a > b ? -1 : 1;
 });
 
-
 //splice
 
 //splice(index, deleteCount, item, item1, item2)
 
-const name = ["john", "alex" ,"bob"]
+const name = ["john", "alex", "bob"];
 // console.log(name.splice(0,1, "shoumen"));
 // console.log(name);
 
-// name.splice (1,0 ,"Shomu") 
+// name.splice (1,0 ,"Shomu")
 // console.log(name); //(4) ['john', 'Shomu', 'alex', 'bob']
 
-name.splice (2,1 ,"Shomu") 
+name.splice(2, 1, "Shomu");
 console.log(name); //(3) ['john', 'alex', 'Shomu']
 
 //at
 
 const fruits = ["Apple", "Banana", "Mango"];
 
-console.log(fruits.at(0));   // Apple
-console.log(fruits.at(1));   // Banana
-console.log(fruits.at(-1));  // Mango
-console.log(fruits.at(-2));  // Banana
-
+console.log(fruits.at(0)); // Apple
+console.log(fruits.at(1)); // Banana
+console.log(fruits.at(-1)); // Mango
+console.log(fruits.at(-2)); // Banana
 
 //flat
 
- const array1 = [0, 1, 2, [3, 4]];
+const array1 = [0, 1, 2, [3, 4]];
 
-  console.log(array1.flat());
-  
-  const array2 = [0, 1, [2, [3, [4, 5]]]];
-  console.log(array2.flat());
-  console.log(array2.flat(2));
-  console.log(array2.flat(Infinity));
+console.log(array1.flat());
+
+const array2 = [0, 1, [2, [3, [4, 5]]]];
+console.log(array2.flat());
+console.log(array2.flat(2));
+console.log(array2.flat(Infinity));
+
+//Grouping
+
+const employees = [
+  { name: "sajal", dept: "Engineering", salary: 5000 },
+  { name: "sajib", dept: "Doctor", salary: 6000 },
+  { name: "araf", dept: "HR", salary: 7000 },
+  { name: "sudipto", dept: "Engineering", salary: 9000 },
+  { name: "shuvo", dept: "Engineering", salary: 10000 },
+];
+
+
+const groupByDet = Object.groupBy(employees, ({dept})=>dept)
+console.log(groupByDet);
