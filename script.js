@@ -294,6 +294,9 @@ const groupByMoreThan5000 = Object.groupBy(employees, ({ salary }) => {
 });
 console.log(groupByMoreThan5000);
 
+
+//Immutibility Method
+
 //toReversed()
 
 const items = [1, 3, 5, 7, 8];
@@ -315,5 +318,25 @@ console.log(spliceMonth); //(5) ['Jan', 'Feb', 'May', 'Mar', 'Dec']
 console.log(month); //(4) ['Jan', 'Feb', 'Mar', 'Dec']
 
 
+//with()
 
+  const number = [1,2,3,4,5]
+  // console.log(number);
+  // number [3] = 10 
+  console.log(number); //unchanged (5) [1, 2, 3, 4, 5]
+
+  //with (index, value)  with synax
+
+
+  //const newArray = number.with (3, 10)
+  //console.log(newArray);  //changed (a new Copy)  (5) [1, 2, 3, 10, 5]
+  
+  number[-2] = 14
+  console.log(number); // (5) [1, 2, 3, 4, 5, -2: 14]
+   const newArray = number.with (-2, 10)
+   console.log(newArray) //(5) [1, 2, 3, 10, 5]
+   
+
+
+  
 
