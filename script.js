@@ -276,21 +276,44 @@ const array1 = [0, 1, 2, [3, 4]];
 
 console.log(array1.flat());
 
-const array2 = [0, 1, [2, [3, [4, 5]]]];
-console.log(array2.flat());
-console.log(array2.flat(2));
-console.log(array2.flat(Infinity));
-
 //Grouping
 
 const employees = [
-  { name: "sajal", dept: "Engineering", salary: 5000 },
+  { name: "sajal", dept: "Engineering", salary: 4000 },
   { name: "sajib", dept: "Doctor", salary: 6000 },
   { name: "araf", dept: "HR", salary: 7000 },
   { name: "sudipto", dept: "Engineering", salary: 9000 },
   { name: "shuvo", dept: "Engineering", salary: 10000 },
 ];
 
-
-const groupByDet = Object.groupBy(employees, ({dept})=>dept)
+const groupByDet = Object.groupBy(employees, ({ dept }) => dept);
 console.log(groupByDet);
+
+const groupByMoreThan5000 = Object.groupBy(employees, ({ salary }) => {
+  return salary >= 5000 ? "More Than 5000" : "Less Than 5000";
+});
+console.log(groupByMoreThan5000);
+
+//toReversed()
+
+const items = [1, 3, 5, 7, 8];
+const reversedItems = items.toReversed();
+console.log(reversedItems); //(5) [8, 7, 5, 3, 1]
+console.log(items); //(5) [1, 3, 5, 7, 8]
+
+//toSorted()
+
+const month = ["Jan", "Feb", "Mar", "Dec"];
+const sortdMonth = month.toSorted() 
+console.log(sortdMonth); // (4) ['Dec', 'Feb', 'Jan', 'Mar']
+console.log(month);
+
+//toSpliced()
+
+const spliceMonth = month.toSpliced(2,0,"May")
+console.log(spliceMonth); //(5) ['Jan', 'Feb', 'May', 'Mar', 'Dec']
+console.log(month); //(4) ['Jan', 'Feb', 'Mar', 'Dec']
+
+
+
+
