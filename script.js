@@ -337,6 +337,11 @@ console.log(month); //(4) ['Jan', 'Feb', 'Mar', 'Dec']
    console.log(newArray) //(5) [1, 2, 3, 10, 5]
    
 
+   //Array Like
 
+
+  const arr_like = {0 : 'I' ,1: 'am' , 2: 'array-like' , length:3 }
+  console.log(typeof arr_like); // object
+  
   
 
