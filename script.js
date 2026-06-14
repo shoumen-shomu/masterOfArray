@@ -342,6 +342,9 @@ console.log(month); //(4) ['Jan', 'Feb', 'Mar', 'Dec']
 
   const arr_like = {0 : 'I' ,1: 'am' , 2: 'array-like' , length:3 }
   console.log(typeof arr_like); // object
+
+  console.log("is arr_like is Array " ,Array.isArray(arr_like)); //false
+  
   
   
 
