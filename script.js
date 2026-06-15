@@ -403,7 +403,7 @@ let customers = [
 
 //Filter Method
 
-const seniorCustomer = customers.filter((customer) =>{
-  return (customer.age>=60)
+const marriedCitizen = customers.filter((customer) =>{
+  return (customer.married ===true)
 })
-console.log("Senior Citizen" ,seniorCustomer );
+console.log("Senior Citizen" ,marriedCitizen );
